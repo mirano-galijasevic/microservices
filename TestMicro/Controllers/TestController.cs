@@ -39,7 +39,7 @@ namespace TestMicro.Controllers
         {
             string version = _configuration [ "Version" ] ?? "0.0";
 
-            return new JsonResult( $"TestController, v. {version}" );
+            return new JsonResult( $"TestController, v. {version}, machine: {Environment.MachineName}" );
         }
     }
 }
